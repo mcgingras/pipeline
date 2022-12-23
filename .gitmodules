@@ -9,3 +9,7 @@
 [submodule "lib/lilnouns-monorepo"]
 	path = lib/lilnouns-monorepo
 	url = https://github.com/lilnounsDAO/lilnouns-monorepo
+[submodule "lib/openzeppelin-contracts"]
+	path = lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+	branch = v4.8.0
