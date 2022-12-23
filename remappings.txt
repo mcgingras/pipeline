@@ -1,4 +1,4 @@
-@openzeppelin/=lib/nouns-protocol/node_modules/@openzeppelin/
+@openzeppelin/=lib/openzeppelin-contracts/
 ds-test/=lib/forge-std/lib/ds-test/src/
 forge-std/=lib/forge-std/src/
 micro-onchain-metadata-utils/=lib/nouns-protocol/node_modules/micro-onchain-metadata-utils/src/
@@ -6,3 +6,4 @@ nouns-protocol/=lib/nouns-protocol/src/
 sol-uriencode/=lib/nouns-protocol/node_modules/sol-uriencode/
 sol2string/=lib/nouns-protocol/node_modules/sol2string/
 lil-nouns/=lib/lilnouns-monorepo/packages/nouns-contracts/contracts/
+base64-sol/=lib/openzeppelin-contracts/contracts/utils/
