@@ -6,3 +6,6 @@
 	path = lib/nouns-protocol
 	url = https://github.com/ourzora/nouns-protocol
 	branch = v1.1.0
+[submodule "lib/lilnouns-monorepo"]
+	path = lib/lilnouns-monorepo
+	url = https://github.com/lilnounsDAO/lilnouns-monorepo
