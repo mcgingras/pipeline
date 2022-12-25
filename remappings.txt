@@ -1,4 +1,5 @@
 @openzeppelin/=lib/openzeppelin-contracts/
+@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/
 ds-test/=lib/forge-std/lib/ds-test/src/
 forge-std/=lib/forge-std/src/
 micro-onchain-metadata-utils/=lib/nouns-protocol/node_modules/micro-onchain-metadata-utils/src/
