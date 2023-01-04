@@ -8,7 +8,7 @@ import { Constants } from './Constants.sol';
 
 abstract contract DescriptorHelpers is Test, Constants {
     function _populateDescriptor(NounsDescriptor descriptor) internal {
-        string memory filename = '/Users/mcgingras/Projects/prop-lot/test/lilnouns/files/descriptor_v1/image-data.abi';
+        string memory filename = '/Users/mcgingras/Projects/prop-lot/test/proplot/files/descriptor_v1/image-data.abi';
         bytes memory content = readFile(filename);
         (
             string[] memory bgcolors,
@@ -30,32 +30,32 @@ abstract contract DescriptorHelpers is Test, Constants {
     function _populateDescriptorV2(NounsDescriptorV2 descriptor) internal {
         // created with `npx hardhat descriptor-art-to-console`
         (bytes memory palette, string[] memory backgrounds) = abi.decode(
-            readFile('/Users/mcgingras/Projects/prop-lot/test/lilnouns/files/descriptor_v2/paletteAndBackgrounds.abi'),
+            readFile('/Users/mcgingras/Projects/prop-lot/test/proplot/files/descriptor_v2/paletteAndBackgrounds.abi'),
             (bytes, string[])
         );
         descriptor.setPalette(0, palette);
         descriptor.addManyBackgrounds(backgrounds);
 
         (bytes memory bodies, uint80 bodiesLength, uint16 bodiesCount) = abi.decode(
-            readFile('/Users/mcgingras/Projects/prop-lot/test/lilnouns/files/descriptor_v2/bodiesPage.abi'),
+            readFile('/Users/mcgingras/Projects/prop-lot/test/proplot/files/descriptor_v2/bodiesPage.abi'),
             (bytes, uint80, uint16)
         );
         descriptor.addBodies(bodies, bodiesLength, bodiesCount);
 
         (bytes memory heads, uint80 headsLength, uint16 headsCount) = abi.decode(
-            readFile('/Users/mcgingras/Projects/prop-lot/test/lilnouns/files/descriptor_v2/headsPage.abi'),
+            readFile('/Users/mcgingras/Projects/prop-lot/test/proplot/files/descriptor_v2/headsPage.abi'),
             (bytes, uint80, uint16)
         );
         descriptor.addHeads(heads, headsLength, headsCount);
 
         (bytes memory accessories, uint80 accessoriesLength, uint16 accessoriesCount) = abi.decode(
-            readFile('/Users/mcgingras/Projects/prop-lot/test/lilnouns/files/descriptor_v2/accessoriesPage.abi'),
+            readFile('/Users/mcgingras/Projects/prop-lot/test/proplot/files/descriptor_v2/accessoriesPage.abi'),
             (bytes, uint80, uint16)
         );
         descriptor.addAccessories(accessories, accessoriesLength, accessoriesCount);
 
         (bytes memory glasses, uint80 glassesLength, uint16 glassesCount) = abi.decode(
-            readFile('/Users/mcgingras/Projects/prop-lot/test/lilnouns/files/descriptor_v2/glassesPage.abi'),
+            readFile('/Users/mcgingras/Projects/prop-lot/test/proplot/files/descriptor_v2/glassesPage.abi'),
             (bytes, uint80, uint16)
         );
         descriptor.addGlasses(glasses, glassesLength, glassesCount);
@@ -76,6 +76,6 @@ abstract contract DescriptorHelpers is Test, Constants {
             uint16 glassesCount
         )
     {
-        return abi.decode(readFile('/Users/mcgingras/Projects/prop-lot/test/lilnouns/files/descriptor_v2/glassesPage.abi'), (bytes, uint80, uint16));
+        return abi.decode(readFile('/Users/mcgingras/Projects/prop-lot/test/proplot/files/descriptor_v2/glassesPage.abi'), (bytes, uint80, uint16));
     }
 }
